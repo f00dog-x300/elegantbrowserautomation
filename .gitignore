@@ -9,3 +9,6 @@
 */Scripts
 */Include
 */pyvenv.cfg
+
+# anything cache related
+*cache*
