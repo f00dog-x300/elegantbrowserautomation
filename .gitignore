@@ -1,4 +1,8 @@
+# for vs code users
 .vscode
+
+# for pycharm users
+.idea
 
 # windows virtual environment
 */Lib
