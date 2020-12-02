@@ -10,8 +10,6 @@ class BaseElement(object):
         self.by = by
         self.locator = (self.by, self.value)
 
-        self.web_element = None
-        self.find()
 
     def find(self):
         element = WebDriverWait(self.driver, 10).until(
