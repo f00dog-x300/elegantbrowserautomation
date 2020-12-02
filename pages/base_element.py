@@ -1,15 +1,15 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from collections import namedtuple
 
+
+Locator = namedtuple("locator", ["by", "value"])
 
 
 class BaseElement(object):
-    def __init__(self, driver, value, by):
+    def __init__(self, driver, locator):
         self.driver = driver
-        self.value = value
-        self.by = by
-        self.locator = (self.by, self.value)
-
+        self.locator = locator
 
     def find(self):
         element = WebDriverWait(self.driver, 10).until(
@@ -27,9 +27,8 @@ class BaseElement(object):
     def attribute(self, attr_name):
         attribute = self.find().get_attribute(attr_name)
         return attribute
-    
+
     @property
     def text(self):
         text = self.find().text
         return text
-        

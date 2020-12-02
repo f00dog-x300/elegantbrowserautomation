@@ -17,3 +17,4 @@ trial_page.stone_button.click()
 
 sleep(3)
 browser.quit()
+print("holy crap shit works")
