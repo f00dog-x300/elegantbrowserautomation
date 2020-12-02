@@ -1,0 +1,7 @@
+.vscode
+
+# windows virtual environment
+*/Lib
+*/Scripts
+*/Include
+*/pyvenv.cfg
