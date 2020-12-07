@@ -8,7 +8,7 @@ from pages.trial_page import TrialPage
 
 # Test Setup
 browser = webdriver.Chrome(ChromeDriverManager().install())
-
+print(type(browser))
 # Trial Page
 trial_page = TrialPage(driver=browser)
 trial_page.go()
