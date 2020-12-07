@@ -54,3 +54,8 @@ class TrialPage(BasePage):
         """
         locator = Locator(by=By.CSS_SELECTOR, value='button#r2Btn')
         return BaseElement(self.driver, locator)
+
+    @property
+    def secret_word(self):
+        locator = Locator(by=By.ID, value='passwordBanner')
+        return BaseElement(self.driver, locator)

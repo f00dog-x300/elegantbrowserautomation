@@ -14,3 +14,4 @@ class TrialPagesTests:
         self.trial_page.go()
         self.trial_page.stone_input.input_text("rock")
         self.trial_page.stone_button.click()
+        assert self.trial_page.secret_word.text == "bamboo"
