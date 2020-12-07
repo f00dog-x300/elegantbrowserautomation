@@ -52,10 +52,15 @@ class TrialPage(BasePage):
         Returns:
             object: Containing instance of BaseElement class to find elements
         """
-        locator = Locator(by=By.CSS_SELECTOR, value='button#r2Btn')
+        locator = Locator(by=By.CSS_SELECTOR, value='button#r2Butn')
         return BaseElement(self.driver, locator)
 
     @property
     def secret_word(self):
         locator = Locator(by=By.ID, value='passwordBanner')
+        return BaseElement(self.driver, locator)
+
+    @property
+    def success_word(self):
+        locator = Locator(by=By.ID, value='successBanner1')
         return BaseElement(self.driver, locator)
