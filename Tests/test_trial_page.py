@@ -23,13 +23,13 @@ class TrialPagesTests:
         return self.trial_page
 
     def test_example(self, trial_page):
-        """Tests to see if secret word appears"""
+        """Validate to see if secret word appears"""
         trial_page.stone_input.input_text("rock")
         trial_page.stone_button.click()
         assert trial_page.secret_word.text == "bamboo"
 
     def test_example2(self, trial_page):
-        """Tests to see if success appears"""
+        """Validate to see if success appears"""
         trial_page.secrets_input.input_text("bamboo")
         trial_page.secrets_button.click()
         assert trial_page.success_word.text == "Success!"

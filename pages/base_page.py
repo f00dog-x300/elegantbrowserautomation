@@ -11,5 +11,6 @@ class BasePage(object):
         self.driver = driver
 
     def go(self):
-        """Helper method to go to url provided by page objects"""
+        """Helper method to go to url provided by page objects. Goes to 
+        url specified by page. Search page object's url property to see URL"""
         self.driver.get(self.url)
